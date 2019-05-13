@@ -1,6 +1,11 @@
 # LitecoinPool Monitor for Today Scripts
-This script plugin provides 'at-a-glance' monitoring of your LitecoinPool workers directly from the MacOS Notification Center. It displays current hash rates for your account, as well as rates and averages for each worker. Optional color-coding makes identifying problems with workers visually simple, and alerts to issues quickly.
+This script plugin provides 'at-a-glance' monitoring of your LitecoinPool workers directly from the MacOS Notification Center. It displays current hash rates for your account, as well as rates and averages for each worker. Optional color-coding makes identifying problems with workers visually simple, and alerts to issues quickly. Stats are updated each time Notification Center is opened.
+
+## Screenshots
 ![LitecoinPool Monitor for Today Scripts](screenshot01.png)
+
+## Related
+If you prefer to monitor your workers from the Menu Bar, check out [https://github.com/jstnryan/litecoinpool-monitor-bitbar](https://github.com/jstnryan/litecoinpool-monitor-bitbar)
 
 ## Today Scripts
 [Today Scripts](https://github.com/SamRothCA/Today-Scripts) is an extensible application which allows the output of shell scripts to be displayed in the MacOS Notification Center (Today View). There is also a [more recently updated fork](https://github.com/megabitsenmzq/Today-Scripts)
