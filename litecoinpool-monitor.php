@@ -12,6 +12,10 @@ $lowRate = [
     'high' => 20,
 ];
 
+// Truncate username from worker name
+//  example: account.worker -> worker
+$shortNames = true;
+
 // Rate denominations, modify to preference; example: 'kH/s'->'k', 'GH/s'->'G'
 $rateMagnitude = [
     0 => 'H/s',     //10^0
@@ -89,9 +93,9 @@ if (isset($obj['workers']) && !empty($obj['workers'])) {
             }
         }
 
-        $w['name'] = $name;
-        if (strlen($name) > $maxCol[0]) {
-            $maxCol[0] = strlen($name);
+        $w['name'] = $shortNames ? substr($name, strrpos($name, '.') + 1) : $name;
+        if (strlen($w['name']) > $maxCol[0]) {
+            $maxCol[0] = strlen($w['name']);
         }
         $w['rate'] = rateFormat($worker['hash_rate']);
         if (strlen($w['rate']) > $maxCol[1]) {
