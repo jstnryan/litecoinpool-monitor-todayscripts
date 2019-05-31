@@ -110,7 +110,7 @@ if (isset($obj['workers']) && !empty($obj['workers'])) {
 }
 $workerLines = str_pad('Worker', $maxCol[0]) . '  ' . str_pad('Speed', $maxCol[1]) . '  ' . str_pad('Av.Spd', $maxCol[2]) . "\n";
 foreach ($workers as $w) {
-    $workerLines .= lineColor(str_pad($w['name'], $maxCol[0]) . '  ' . str_pad($w['rate'], $maxCol[1]) . '  ' . str_pad($w['ave'], $maxCol[2]) . "\n", $w['fault']);
+    $workerLines .= lineColor(str_pad($w['name'], $maxCol[0]) . '  ' . str_pad($w['rate'], $maxCol[1], ' ', STR_PAD_LEFT) . '  ' . str_pad($w['ave'], $maxCol[2], ' ', STR_PAD_LEFT) . "\n", $w['fault']);
 }
 
 echo 'Current Speed: ' . rateFormat($obj['user']['hash_rate']) ."\n";
